@@ -7,3 +7,8 @@ Git-push attempt 3
 Git-push attempt 4
 
 Git-push attempt 5
+
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} amazon.jar
+ENTRYPOINT ["java","-jar","/amazon.jar"]
